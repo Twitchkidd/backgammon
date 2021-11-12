@@ -1,11 +1,18 @@
 import styled, { keyframes } from 'styled-components';
 import { dark, light } from '../utils/colors';
 
-const breatheAnimation = keyframes`
-  0% { border-radius: 4rem; }
-  30% { border-radius: 2rem; }
-  40% { border-radius: 1.5rem; }
-  100% { border-radius: 4rem; }
+/*
+ *
+ * The animation can start taking into account that it's a child element of a
+ * parent with perspecive set.
+ *
+ * The title should drop through the back of the screen and arresto momentum.
+ *
+ */
+
+const splashAnim = keyframes`
+  0% { transform: translateZ(1600px); }
+  100% { transform: translateZ(0px); }
 `;
 
 const Wrapper = styled.div`
@@ -20,8 +27,8 @@ const Wrapper = styled.div`
 	color: ${dark};
 	text-align: center;
 
-	/* border-radius: 2rem; */
-	animation: ${breatheAnimation} 4s infinite;
+	animation: ${splashAnim} 2s 1;
+	border-radius: 2rem;
 `;
 
 const Title = () => (

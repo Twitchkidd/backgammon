@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 // import Game from './components/Game';
 import Global from './components/Global';
 import Main from './components/Main';
@@ -21,19 +21,17 @@ import Title from './components/Title';
 // and *then* start things, and keep state less cluttered and probably more
 // performant, right? Let's try!
 
+// First let's delete the piece of state, and abstract what we had in the
+// useEffect, and comment out those dependencies, then we'll figure out what
+// to do with it.
+
 const App = () => {
-	const [splash, setSplash] = useState(true);
-	useEffect(() => {
-		setTimeout(() => {
-			if (splash) {
-				setSplash(false);
-			}
-		}, 3000);
-	}, [splash]);
 	return (
 		<>
 			<Global />
-			<Main>{/* <Title splash={splash} /> */}</Main>
+			<Main>
+				<Title />
+			</Main>
 		</>
 	);
 };
