@@ -22,3 +22,5 @@ A quick paraphrase of the rules as I understand them:
 Okay, to test the logic, let's get a really basic graphical setup. What's the markup like? Well, we've got a board, and then there's the four sub-boards and the bar, and a place for the chips to go when they're taken out, and you'll need the dice, the doubling cube before it goes on the bar (that's right, right?) and then the spaces and the chips, and possible a place for other info, let's build and if I'm missing something it will become evident.
 
 Initial conditions, 2 on space 24, 5 on space 13, 3 on space 8, and 5 on space 6.
+
+Design decision, it's going to be from player one's POV, and we can split it out when we add networking.

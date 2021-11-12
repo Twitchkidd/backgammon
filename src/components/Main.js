@@ -1,10 +1,19 @@
 import styled from 'styled-components';
+import { light, dark } from '../utils/colors';
 
 const Main = styled.main`
-	width: 100vw;
-	height: 100vh;
 	display: grid;
 	place-items: center;
+
+	position: relative;
+
+	width: 100vw;
+	height: 100vh;
+	background: ${dark};
+
+	color: ${light};
+
+	perspective: 400px;
 `;
 
 export default Main;
