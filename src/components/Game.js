@@ -19,3 +19,5 @@ const Game = ({ state }) => (
 		<Text>{state}</Text>
 	</Board>
 );
+
+export default Game;
